@@ -42,3 +42,33 @@ input{
     align-items: center;
     overflow: scroll;
 }
+
+.card-wrapper{
+    width: 100%; 
+    /* background-color: #FFC107; */
+    background-color: #FFFFFF;
+    padding: 8px; 
+    border: 1px solid #607d8b;
+    margin: 15px;
+}
+
+.card-name{
+    color:#455A64;
+    font-size: 28px; 
+    border-bottom: 1px solid #CFD8DC
+}
+
+.card-url{
+    color: #607D8B;
+    font-size: 25px; 
+}
+
+.button-area{
+    padding: 2px; 
+    margin-top: 5px; 
+    border-top: 1px solid #CFD8DC
+}
+
+.delete-button{
+    float: right; 
+}

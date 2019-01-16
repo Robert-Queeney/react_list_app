@@ -14,11 +14,6 @@ class Card extends React.Component {
         <div className='card' >
             <h1 className="card-name" key={data.name}>{data.name}</h1>
             <div className="card-url" key={data.url}>{data.url}</div>
-            <div className="button-div">
-                <button className="readButton">Mark as Read</button>
-                
-            </div>
-
         </div>
     )
 
