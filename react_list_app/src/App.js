@@ -22,8 +22,9 @@ class App extends Component {
 
   handleDeleteCard = (key) => {
     const cards = {...this.state.cards}
-    cards[key] = null; 
+    cards.splice(key) 
     this.setState({ cards })
+    console.log(cards.index)
   }
 
   render() {
