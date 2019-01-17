@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../src/CSS/style.css';
 import InputSection from './components/InputSection';
 import Cards from './components/Cards'; 
+import Header from './components/Header'; 
 
 
 class App extends Component {
@@ -30,9 +31,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <InputSection 
-          handleAddCard={this.handleAddCard}
-          />
+        <div className="left-side">
+          <Header />
+          <InputSection 
+            handleAddCard={this.handleAddCard}
+            />
+        </div>
         <Cards 
           cards={this.state.cards} 
           handleDeleteCard={this.handleDeleteCard}

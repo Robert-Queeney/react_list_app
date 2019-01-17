@@ -4,9 +4,33 @@
     background-color: #cfd8dc;
 }
 
-.input-form{
-    width: 50%;
+.left-side{
+    width: 50%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     background-color: #455a64;
+}
+
+.header{
+    display: flex; 
+    align-items: center;
+    height:30px; 
+    width: 240px; 
+    margin-bottom: 15px; 
+    font-size: 40px; 
+    color: #ffffff;
+    background-color: hotpink;
+}
+
+.logo{
+    object-fit: scale-down; 
+}
+
+.input-form{
+    /* width: 50%; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
