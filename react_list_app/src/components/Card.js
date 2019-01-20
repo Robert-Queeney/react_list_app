@@ -1,15 +1,15 @@
 import React from 'react'; 
 
-class Card extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {data: this.props.data}
-    }
+// class Card extends React.Component {
+//     constructor(props){
+//         super(props)
+//         this.state = {data: this.props.data}
+//     }
 
 
-    render(){
-        const { data } = this.state; 
-// const Card = ({ data }) => {
+//     render(){
+//         const { data } = this.state; 
+const Card = ({ data }) => {
     return(
         <div className='card' >
             <h1 className="card-name" key={data.name}>{data.name}</h1>
@@ -18,5 +18,5 @@ class Card extends React.Component {
     )
 
 }
-}
+// }
 export default Card; 

@@ -21,11 +21,9 @@ class App extends Component {
     });
   }
 
-  handleDeleteCard = (key) => {
-    const cards = {...this.state.cards}
-    cards.splice(key) 
-    this.setState({ cards })
-    console.log(cards.index)
+  handleDeleteCard = (index) => {
+    this.state.cards.splice(index, 1) 
+    this.setState({ cards: this.state.cards })
   }
 
   render() {
@@ -38,8 +36,8 @@ class App extends Component {
             />
         </div>
         <Cards 
+          handleSubmit={this.handleDeleteCard}
           cards={this.state.cards} 
-          handleDeleteCard={this.handleDeleteCard}
         />
       </div>
     );

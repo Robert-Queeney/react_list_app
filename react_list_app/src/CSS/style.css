@@ -15,17 +15,21 @@
 
 .header{
     display: flex; 
-    align-items: center;
-    height:30px; 
+    /* align-items: center; */
+    height:50px; 
     width: 240px; 
     margin-bottom: 15px; 
     font-size: 40px; 
     color: #ffffff;
-    background-color: hotpink;
+    /* background-color: hotpink; */
+    margin-left: -50px; 
 }
 
 .logo{
     object-fit: scale-down; 
+    /* background-color: #FFC107; */
+    margin-left: -75px; 
+    margin-right: -75px; 
 }
 
 .input-form{
