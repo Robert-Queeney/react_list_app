@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import ReadButton from './ReadButton';
 
 
 // class Cards extends React.Component {
@@ -25,7 +26,8 @@ const Cards = ({ handleSubmit, cards}) => {
                         <div className="card-wrapper" key={card.name} >
                             <Card  data={card} />
                             <div className="button-area">
-                                <button className="read-button" type="submit">Mark As Read</button>
+                                {/* <button className="read-button" type="submit">Mark As Read</button> */}
+                                <ReadButton className="read-button" defaultText="Mark as Read" changedText="Mark as Unread" />
                                 <button className="delete-button" type="submit" onClick={() => handleSubmit(i)}>Delete</button>
                             </div>
                         </div>
