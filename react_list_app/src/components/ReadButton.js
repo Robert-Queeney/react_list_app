@@ -9,6 +9,7 @@ class ReadButton extends React.Component {
         this.changeTitle = this.changeTitle.bind(this);
     }
 
+    
     changeTitle(){
         if(this.state.title === "Mark as Read"){
         this.setState({ title: this.props.changedText });
@@ -16,9 +17,17 @@ class ReadButton extends React.Component {
             this.setState({ title: this.props.initialText })
         }
     }
+// Should this be here?   it cannot read state of undefined "read" -- that state lives in input section.
+    handleUpdateRead = () => {
+        this.setState({
+          read: !this.state.cards.read
+        })
+        console.log("Updated Read")
+      }
+    
 
     render(){
-        return<button onClick={this.changeTitle}>{this.state.title}</button>;
+        return<button onClick={(event) => {this.changeTitle(); this.handleUpdateRead()  }}>{this.state.title}</button>;
     }
 }
 

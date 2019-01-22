@@ -15,7 +15,7 @@ import ReadButton from './ReadButton';
     //     this.props.handleDeleteCard(e)
     // }
 
-const Cards = ({ handleSubmit, cards}) => {
+const Cards = ({ handleSubmit, cards, handleUpdateRead}) => {
    
         // swithced it to a stateful component to bring in functions
         // const Cards = ({ cards }) => {
@@ -27,7 +27,7 @@ const Cards = ({ handleSubmit, cards}) => {
                             <Card  data={card} />
                             <div className="button-area">
                                 {/* <button className="read-button" type="submit">Mark As Read</button> */}
-                                <ReadButton className="read-button" defaultText="Mark as Read" changedText="Mark as Unread" />
+                                <ReadButton onClick={(e) => handleUpdateRead(e)}  className="read-button" defaultText="Mark as Read" changedText="Mark as Unread" />
                                 <button className="delete-button" type="submit" onClick={() => handleSubmit(i)}>Delete</button>
                             </div>
                         </div>

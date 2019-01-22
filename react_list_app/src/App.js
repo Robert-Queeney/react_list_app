@@ -10,11 +10,11 @@ class App extends Component {
     cards:[]
   };s
 
-  handleAddCard = (name, url) =>{
+  handleAddCard = (name, url, read) =>{
     // 1. Take a copy of existing state
     // const cards = [...this.state.cards]; 
     // 2. Add a new card to that cards variable
-    this.state.cards.push({name, url})
+    this.state.cards.push({name, url, read})
     // 3. Set state to that new state
     this.setState({ 
       cards: this.state.cards
@@ -26,6 +26,13 @@ class App extends Component {
     this.setState({ cards: this.state.cards })
   }
 
+  handleUpdateRead = () => {
+    this.setState({
+      read: !this.state.cards.read
+    })
+    console.log("Updated Read")
+  }
+
   render() {
     return (
       <div className="App">
@@ -35,7 +42,8 @@ class App extends Component {
             handleAddCard={this.handleAddCard}
             />
         </div>
-        <Cards 
+        <Cards
+          handleUpdateRead={this.handleUpdateRead} 
           handleSubmit={this.handleDeleteCard}
           cards={this.state.cards} 
         />

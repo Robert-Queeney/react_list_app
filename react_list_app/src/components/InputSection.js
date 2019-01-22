@@ -6,6 +6,7 @@ class InputSection extends Component {
         this.state = {
             name: '',
             url: '',
+            read: false,
         }
     }  
     
@@ -17,10 +18,11 @@ class InputSection extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.handleAddCard(this.state.name, this.state.url)
+        this.props.handleAddCard(this.state.name, this.state.url, this.state.read)
         this.setState({
             name: '', 
             url: '',
+            read: ''
         })
     }
 
